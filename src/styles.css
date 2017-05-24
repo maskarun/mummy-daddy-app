@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+	margin: 0;
+  	padding: 0;
+}
+/* Remove the navbar's default rounded borders and increase the bottom margin */ 
+.navbar {
+	margin-left: 0px;
+	margin-bottom: 50px;
+  	border-radius: 0;
+}
+
+.price {
+	color: red;
+}
+
+.price-lg {
+	color: red;
+	font-size: 18px;
+}
+
+.stock {
+	color: green;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+	background-color: #f2f2f2;
+  	padding: 25px;
+}

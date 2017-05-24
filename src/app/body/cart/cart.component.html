@@ -1,0 +1,55 @@
+<div class="container">
+	<div class="row" *ngIf="(cart.products != null)">
+		<div class="col-sm-9">
+			<div class="table-responsive">
+				<h3>Shopping Cart</h3>
+				<table class="table">
+					<thead>
+						<tr>
+							<th></th>
+							<th>Price</th>
+							<th>Quantity</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let product of cart.products">
+							<th>
+								<div class="col-sm-2">
+									<img src="{{product.imgSource}}" class="img-responsive" style="width:100%" alt="Image">
+								</div>
+								<div>
+									<h4>{{product.name}}</h4>
+								</div>
+							</th>
+							<th><span class="price"><i class="fa fa-inr"></i> {{product.offerPrice}}</span></th>
+							<th>{{product.quantity}}</th>
+						</tr>
+					</tbody>
+				</table>
+				<hr>
+				<div class="pull-right">
+					<label>Subtotal ({{cart.totalQty}} items): <span class="price"><i class="fa fa-inr"></i>{{cart.subTotal}}</span></label>
+				</div>
+			</div>
+			<hr/>
+			<div class="row">
+				<p>The price and availability of items at mummydaddy.in are subject to change. The shopping cart is a temporary place to store a list of your items and reflects each item's most recent price.</p>
+				<p>Do you have a promotional code? We'll ask you to enter your claim code when it's time to pay.</p>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div class="well well-lg">
+			<label>Subtotal ({{cart.totalQty}} items): <span class="price"><i class="fa fa-inr"></i> {{cart.subTotal}}</span></label><br/><br/>
+				<button type="button" class="btn btn-info btn-block">Proceed to Checkout</button>
+			</div>
+		</div>
+	</div>
+	<div class="row" *ngIf="(cart.products == null)">
+		<div class="col-sm-9">
+			<div> 
+				<h3>Your Shopping Cart is empty.</h3>
+				<p>Your Shopping Cart lives to serve. Give it purpose--fill it with books, CDs, videos, DVDs, electronics, and more. Continue shopping on the mummydaddy.in homepage.</p>
+			</div>
+		</div>
+	</div>
+</div>

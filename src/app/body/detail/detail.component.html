@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-5">
+			<img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image" />
+		</div>
+		<div class="col-sm-4">
+			<h3>{{product.name}}</h3>
+			<hr>
+			<p class="text-muted" style="padding-left: 21px;">M.R.P : <span class="price"><i class="fa fa-inr"></i> <del>{{product.mrpPrice | number}}</del></span></p>
+			<p class="text-muted" style="padding-left: 28px;">Price : <span class="price-lg"><i class="fa fa-inr"></i> {{product.offerPrice | number}}</span></p>
+			<p class="text-muted">You Save : <span class="price"><i class="fa fa-inr"></i> {{product.mrpPrice - product.offerPrice |number}}</span></p>
+			<p class="text-muted" style="padding-left: 70px;">{{product.freeDelivery}}</p>
+			<label class="stock">In stock</label>
+		</div>
+		<div class="col-sm-3">
+			<div class="well well-lg">
+				<label><span class="price-lg"><i class="fa fa-inr"></i> {{product.offerPrice}}</span> + {{product.freeDelivery}} </label><br><br>
+				<label>Quantity : </label>
+				<select class="selectpicker" style="width: 50px;">
+				    <option>1</option>
+				    <option>2</option>
+				    <option>3</option>
+				    <option>4</option>
+				</select><br/><br/>
+				<div class="row">
+					<button type="button" class="btn btn-info btn-block" (click)="addToCart()">Add to Cart</button>
+					<button type="button" class="btn btn-info btn-block" (click)="buyNow()">Buy Now</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row col-sm-12">
+		<h5>Product Description</h5>
+		<hr>
+	</div>
+	
+	<div class="row col-sm-12">
+		<h5>Product Details</h5>
+		<hr>
+	</div>
+	
+	<div class="row col-sm-12">
+		<h5>Customer Reviews</h5>
+		<hr>
+	</div>
+	
+</div>
