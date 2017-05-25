@@ -10,10 +10,14 @@ import { CartService } from '../cart/cart.service';
 export class CartComponent implements OnInit {
 	
 	cart:Cart;
+	showCart:boolean = false;
 
   	constructor(private cartService:CartService) { }
 
   	ngOnInit() {
   		this.cart = this.cartService.getCart();
+  		if(this.cart.products.length > 0){
+  			this.showCart = true;
+  		}
   	}
 }
